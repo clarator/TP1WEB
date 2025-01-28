@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+header{
+    background: linear-gradient(#13181d, #20212e, #4169E1); ;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header nav h1{
+    margin: 0;
+    color: #4169E1;
+    text-transform: uppercase;
+}
+
+header nav .droite{
+    display: flex;
+    align-items: center; 
+
+}
+
+header nav .droite p{
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav .droite button{
+    padding: 5px 15px;
+	font-size: 16px;
+	background-color: inherit;
+	border: 1px solid #4169E1;
+	border-radius: 5px;
+	color: #4169E1;
+	cursor: pointer;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+header nav .droite button:hover{
+    color: inherit;
+    background-color: #4169E1;
+}
+
+.presentation1{
+    padding: 30px 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentation1 .gauche{
+    width: 100%;
+    flex-shrink: 3;
+}
+
+.presentation1 .gauche h1{
+    margin: 0;
+    font-size: 4vw;
+    width: 80%;
+}
+
+.presentation1 .gauche button {
+    background-color: #4169E1;
+    color: inherit;
+    padding: 15px 15px;
+	font-size: 16px;
+    border: 1px solid #4169E1;
+    border-radius: 10px;
+    cursor: pointer;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+.presentation1 .gauche button:hover {
+	background-color: inherit;
+	color: #4169E1;
+}
+
+.presentation1 .grandeImage img{
+    width: 100%;
+}
+
+.presentation1 .gauche .petiteImage {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.presentation1 .gauche .petiteImage .petite {
+	padding: 20px;
+	background-color: #33314d;
+	margin: 0 15px 15px 0;
+	border-radius: 20px;
+	transition: filter 0.5s;
+}
+
+.presentation1 .gauche .petiteImage .petite:hover {
+	filter: brightness(50%);
+}
+.presentation1 .gauche .petiteImage .petite img {
+	width: 120px;
+}
+
+.presentation2{
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #20212e;
+}
+
+.presentation2 .produit .nouveauProduit {
+   color: #4169E1;
+    font-size: 16px;
+}
+
+.presentation2 .produit h1{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.presentation2 .produit button{
+    background-color: inherit;
+    color: #4169E1;
+    padding: 15px 15px;
+    font-size: 16px;
+    border: 1px solid #4169E1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.presentation2 .produit button:hover{
+    color: inherit;
+    background-color: #4169E1;
+}
+
+.presentation3{
+    padding: 30px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #13181d;
+}
+
+.presentation3  h3{
+    margin: 0;
+    color: #4169E1;
+}
