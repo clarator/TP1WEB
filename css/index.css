@@ -34,6 +34,7 @@ header nav .droite p{
     margin: 0 10px;
     text-decoration: none;
     font-size: 16px;
+    cursor: pointer;
 }
 
 header nav .droite button{
@@ -147,15 +148,22 @@ header nav .droite button:hover{
     background-color: #4169E1;
 }
 
-.presentation3{
-    padding: 30px 5%;
+footer{
+    margin: 0;
+    padding: 20px;
+    background-color: black;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #13181d;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.presentation3  h3{
-    margin: 0;
-    color: #4169E1;
+footer h3 {
+	color: #4169E1;
+}
+footer p {
+	cursor: pointer;
+	color: #ccc;
+}
+footer p:hover {
+	color: white;
 }
