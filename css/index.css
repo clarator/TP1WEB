@@ -24,30 +24,82 @@ header nav h1 {
     text-transform: uppercase;
 }
 
-header nav .droite {
+header nav {
     display: flex;
 }
 
-header nav .droite p {
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 16px;
+.sidebar {
+    width: 50px;
     cursor: pointer;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
 }
 
-header nav .droite button {
+.sidebar div {
+    width: 40px;
+    height: 4px;
+    background-color: #4169E1;
+    margin: 5px 0;
+    transition: 0.3s;
+    position: relative;
+}
+
+.sidebar.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sidebar.open div:nth-child(2) {
+    display: none;
+}
+
+.sidebar.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.sidebarOuvert {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #13181d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.sidebarOuvert.open {
+    right: 0;
+    align-items: center;
+    padding-top: 50%;
+}
+
+.sidebarOuvert  p {
+    padding: 10%;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebarOuvert button {
     padding: 8px 20px;
-    font-size: 18px;
+    font-size: 20px;
     background-color: inherit;
     border: 1px solid #4169E1;
     border-radius: 5px;
     color: #4169E1;
     cursor: pointer;
+    margin: 10px;
     transition: color 0.5s, background-color 0.5s;
+
 }
 
-header nav .droite button:hover {
+.sidebarOuvert button:hover {
     color: inherit;
     background-color: #4169E1;
 }
@@ -174,6 +226,8 @@ footer p:hover {
 }
 
 
+
+/*Responsive*/
 @media (max-width: 450px) {
     header nav p {
         display: none;
