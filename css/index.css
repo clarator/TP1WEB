@@ -11,11 +11,11 @@ header {
 }
 
 header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
+    padding: 30px 5% 0px 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
 }
 
 header nav h1 {
@@ -24,86 +24,130 @@ header nav h1 {
     text-transform: uppercase;
 }
 
-header nav {
+header nav .droite {
     display: flex;
-}
-
-.sidebar {
-    width: 50px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 2;
-}
-
-.sidebar div {
-    width: 40px;
-    height: 4px;
-    background-color: #4169E1;
-    margin: 5px 0;
-    transition: 0.3s;
-    position: relative;
-}
-
-.sidebar.open div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.sidebar.open div:nth-child(2) {
-    display: none;
-}
-
-.sidebar.open div:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.sidebarOuvert {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #13181d;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    transition: right 0.3s ease-in-out;
-    z-index: 1;
-}
-
-.sidebarOuvert.open {
-    right: 0;
     align-items: center;
-    padding-top: 50%;
 }
 
-.sidebarOuvert  p {
-    padding: 10%;
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
+header nav .droite p {
+    margin: 0 15px 0 0;
+    color: #4169E1;
 }
 
-.sidebarOuvert button {
+header nav .right p:hover {
+	color: white;
+	cursor: pointer;
+}
+
+header nav .droite button {
     padding: 8px 20px;
-    font-size: 20px;
+    font-size: 16px;
     background-color: inherit;
     border: 1px solid #4169E1;
     border-radius: 5px;
     color: #4169E1;
     cursor: pointer;
-    margin: 10px;
     transition: color 0.5s, background-color 0.5s;
-
 }
 
-.sidebarOuvert button:hover {
+header nav .droite button:hover {
     color: inherit;
     background-color: #4169E1;
 }
 
+.sidebarOuvert{
+    display: none;
+}
+
+@media (max-width: 450px) {
+    header nav .menu{
+        display: none;
+    }
+    
+    header nav .droite p {
+        display: none;
+    }
+
+    header nav .droite button {
+        display: none;
+    }
+
+    .sidebar {
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+    }
+
+    .sidebar div {
+        width: 40px;
+        height: 4px;
+        background-color: #4169E1;
+        margin: 5px 0;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .sidebar.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .sidebar.open div:nth-child(2) {
+        display: none;
+    }
+
+    .sidebar.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .sidebarOuvert {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 200px;
+        height: 100%;
+        background-color: #13181d;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .sidebarOuvert.open {
+        right: 0;
+        align-items: center;
+        padding-top: 50%;
+    }
+
+    .sidebarOuvert  p {
+        padding: 10%;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .sidebarOuvert button {
+        padding: 8px 20px;
+        font-size: 20px;
+        background-color: inherit;
+        border: 1px solid #4169E1;
+        border-radius: 5px;
+        color: #4169E1;
+        cursor: pointer;
+        margin: 10px;
+        transition: color 0.5s, background-color 0.5s;
+
+    }
+
+    .sidebarOuvert button:hover {
+        color: inherit;
+        background-color: #4169E1;
+    }
+}
 .presentation1 {
     padding: 30px 5%;
     margin-top: 5%;
@@ -149,7 +193,6 @@ header nav {
 .presentation1 .gauche .petiteImage {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .presentation1 .gauche .petiteImage .petite {
@@ -161,7 +204,7 @@ header nav {
 }
 
 .presentation1 .gauche .petiteImage .petite:hover {
-    filter: brightness(50%);
+    filter: brightness(40%);
 }
 
 .presentation1 .gauche .petiteImage .petite img {
@@ -225,8 +268,6 @@ footer p:hover {
     color: white;
 }
 
-
-
 /*Responsive*/
 @media (max-width: 450px) {
     header nav p {
@@ -250,8 +291,8 @@ footer p:hover {
     }
 
     .presentation1 .gauche .petiteImage {
-        justify-content: center;
         flex-direction: row;
+        justify-content: center;
     }
 
     .presentation1 .gauche button {
