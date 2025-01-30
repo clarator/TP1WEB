@@ -1,3 +1,4 @@
+//ouverture et fermeture de la sidebar
 document.addEventListener("DOMContentLoaded", function () {
     const sidebarToggle = document.querySelector(".sidebar");
     const sidebarMenu = document.querySelector(".sidebarOuvert");
