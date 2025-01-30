@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    padding-top: 30px;
 }
 
 header {
@@ -19,6 +20,11 @@ header nav {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+    position: fixed;
+    top: 0;
+    width: 90%; 
+    background-color: white; 
+    background: #13181d;
 }
 
 header nav h1 {
@@ -225,11 +231,7 @@ header nav .droite button:hover {
     cursor: pointer;
     margin: 10px;
     transition: color 0.5s, background-color 0.5s;
-
-
 }
-
-
 
 .open {
     display: flex; 
