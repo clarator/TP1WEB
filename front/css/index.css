@@ -28,6 +28,7 @@ header nav {
 header nav h1 {
     margin: 0;
     color: #4169E1;
+    text-decoration: none;
 }
 
 header nav .droite {
@@ -39,6 +40,7 @@ header nav .droite {
 header nav .droite p {
     margin: 0 15px 0 0;
     color: #4169E1;
+    cursor: pointer;
 }
 
 header nav .right p:hover {
@@ -71,9 +73,11 @@ header nav .droite button:hover {
     header nav .menu{
         display: none;
     }
-    
+
+
     header nav .droite p {
         display: none;
+        cursor: pointer;
     }
 
     header nav .droite button {
@@ -158,7 +162,7 @@ header nav .droite button:hover {
 }
 .presentation1 {
     padding: 30px 5%;
-    margin-top: 5%;
+    margin-top: 55px;
     display: flex;
 }
 
@@ -167,7 +171,6 @@ header nav .droite button:hover {
 }
 
 .presentation1 .gauche h1 {
-    margin: 0;
     font-size: 4vw;
     width: 100%;
 }
@@ -286,7 +289,7 @@ footer p:hover {
     .presentation1 {
         flex-direction: column;
         text-align: center;
-       
+       margin-top: 5%;
     }
 
     .presentation1 .grandeImage img {

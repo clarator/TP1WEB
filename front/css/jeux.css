@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-top: 30px;
+}
+
+header {
+    background: linear-gradient(#13181d, #20212e, #4169E1);
+}
+
+header nav {
+    padding: 30px 5% 0px 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 90%; 
+    background-color: white; 
+    background: #13181d;
+}
+
+header nav h1 {
+    margin: 0;
+    color: #4169E1;
+}
+
+header nav .droite {
+    display: flex;
+    align-items: center;
+    margin-left:auto;
+}
+
+header nav .droite p {
+    margin: 0 15px 0 0;
+    color: #4169E1;
+    cursor: pointer;
+}
+
+header nav .right p:hover {
+	color: white;
+	cursor: pointer;
+}
+
+header nav .droite button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: inherit;
+    border: 1px solid #4169E1;
+    border-radius: 5px;
+    color: #4169E1;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+    margin: 10px;
+}
+
+header nav .droite button:hover {
+    color: inherit;
+    background-color: #4169E1;
+}
+
+.sidebarOuvert{
+    display: none;
+}
+
+@media (max-width: 450px) {
+    header nav .menu{
+        display: none;
+    }
+
+
+    header nav .droite p {
+        display: none;
+    }
+
+    header nav .droite button {
+        display: none;
+    }
+
+    .sidebar {
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+    }
+
+    .sidebar div {
+        width: 40px;
+        height: 4px;
+        background-color: #4169E1;
+        margin: 5px 0;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    .sidebar.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .sidebar.open div:nth-child(2) {
+        display: none;
+    }
+
+    .sidebar.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .sidebarOuvert {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 200px;
+        height: 100%;
+        background-color: #13181d;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .sidebarOuvert.open {
+        right: 0;
+        align-items: center;
+        padding-top: 50%;
+    }
+
+    .sidebarOuvert  p {
+        padding: 10%;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .sidebarOuvert button {
+        padding: 8px 20px;
+        font-size: 20px;
+        background-color: inherit;
+        border: 1px solid #4169E1;
+        border-radius: 5px;
+        color: #4169E1;
+        cursor: pointer;
+        margin: 10px;
+        transition: color 0.5s, background-color 0.5s;
+
+    }
+
+    .sidebarOuvert button:hover {
+        color: inherit;
+        background-color: #4169E1;
+    }
+}
+
+.choixJeu {
+    display:flex;
+    margin-block-start: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.choixJeu .petiteImage {
+    margin-top: 30px;
+    display: flex;   
+}
+
+
+.petite {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    background-color: #4169E1;
+    margin: 30px; 
+    border-radius: 20px;
+}
+
+.petite img {
+    width: 100%;
+    margin:10%;
+    padding: auto;
+}
+
+.petite h2{
+    font-size: 20px;
+    padding: 20%;
+    margin: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.petite button{
+    margin: 10%;
+    padding: 10%;
+    width: 100%;
+    border-radius: 20px;
+    border-color: #4169E1;
+    transition: filter 0.5s;
+    cursor: pointer;
+}
+
+.petite button:hover {
+    filter: brightness(40%);
+}
+
+footer {
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer h3 {
+    color: #4169E1;
+}
+footer p {
+    cursor: pointer;
+    color: #ccc;
+}
+footer p:hover {
+    color: white;
+}
+
+
+/*Responsive*/
+@media (max-width: 450px) {
+    header nav p {
+        display: none;
+    }
+    .choixJeu{
+        margin-top: 0%;
+    }
+
+    .petiteImage {
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .petite h2{
+        font-size: 30px;
+    }
+
+    .petite button{
+        font-size: 25px;
+        justify-content: center;
+    }
+
+
+    .petiteImage .petite img {
+        width: 100%; 
+    }
+
+    footer {
+        flex-direction: column;       
+        text-align: center;
+    }
+}
+

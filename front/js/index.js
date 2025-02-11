@@ -18,3 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boutonConnexion = document.querySelector(".btConnexion");
+    boutonConnexion.addEventListener("click", function () {
+        window.location.href = "connexion.html";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boutonConnexion = document.querySelector(".accueil");
+    boutonConnexion.addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
+});

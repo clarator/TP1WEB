@@ -45,11 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
         formInscription.addEventListener("submit", function (e) {
             e.preventDefault();
 
+            const nom = e.target.querySelector(".nom").value;
             const email = e.target.querySelector(".email").value;
             const password = e.target.querySelector(".password").value;
             const password2 = e.target.querySelector(".password2").value;
 
-            if (email === "" || password === "" || password2 === "") {
+            if (nom === "" || email === "" || password === "" || password2 === "") {
                 alert("Veuillez remplir tous les champs");
             } else if (password !== password2) {
                 alert("Les mots de passe ne correspondent pas");
@@ -82,11 +83,25 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (password !== storedPassword) {
                 alert("Mot de passe incorrect");
             } else {
-                window.location.href = "index.html"; 
+                window.location.href = "jeux.html"; 
                 console.log("Connexion réussie");
             }
         });
     } else {
         console.log("Formulaire de connexion non trouvé !");
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boutonConnexion = document.querySelector(".btConnexion");
+    boutonConnexion.addEventListener("click", function () {
+        window.location.href = "connexion.html";
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boutonConnexion = document.querySelector(".accueil");
+    boutonConnexion.addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,11 @@
             <nav>
                 <h1>HEADBOOST</h1>
                 <div class="droite">
-                    <p>Accueil</p>
+                    <p class="accueil">Accueil</p>
                     <p>Présentation</p>
                     <p>Contact</p>
                     <button>Acheter</button>
-                    <button><a href="connexion.html">Connexion</a></button>
+                    <button class="btConnexion">Connexion</button>
                 </div>
                 <div class="sidebar">
                     <div></div>
@@ -26,7 +26,7 @@
                 </div>
             </nav>
             <div class="sidebarOuvert">
-                <p>Accueil</p>
+                <p class="accueil">Accueil</p>
                 <p>Présentation</p>
                 <p>Contact</p>
                 <button>Acheter</button>
@@ -52,6 +52,8 @@
                     <div class="inscription">    
                         <form action="index.html" method="post" class="formInscription">
                             <h2>S'inscrire</h2>    
+                            <label for="nom">Nom</label>
+                            <input type="nom" name="nom" id="nom" class="nom" required>
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="email" required>
                             <label for="password">Mot de passe</label>
